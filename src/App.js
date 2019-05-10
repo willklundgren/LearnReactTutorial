@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SizeBox from './SizeBox'
 
-// const getTitles = (products) => {
-//     products.
-// }
 
 function App() {
 
@@ -30,22 +28,20 @@ function App() {
     if (products != null) {
         console.log( products['products'] );
     }
-
-    var titles = [];
-
-    if (products != null) {
-        for (var product in products['products']) {
-            titles.push(products['products'][product]['title']);
-        }
-    };
-
-    console.log(titles)
+    //
+    // var titles = [];
+    //
+    // if (products != null) {
+    //     for (var product in products['products']) {
+    //         titles.push(products['products'][product]['title']);
+    //     }
+    // };
+    //
+    // console.log(titles)
     
 
     return (
-        <div>
-            {titles.map( (title) => <li>{title}</li>)}
-        </div>
+        <SizeBox/>
     );
 }
 
