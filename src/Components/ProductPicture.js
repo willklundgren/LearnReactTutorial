@@ -23,10 +23,33 @@ const styles = {
 
 // <img src={props.src} />
 
-const ProductPicture = props => {
+// for reference: <ProductPicture src = {require("./data/products/876661122392077_1.jpg")}/>
+
+
+// Goal: map given "src" string (the product sku) to its .jpg file name
+
+//new-shopping-cart/src/876661122392077_test.jpg
+
+const constructPath = sku => {
+    const path = "../data/products/" + sku + "_1.jpg";
+    return path;
+};
+
+const ProductPicture = ( {sku} ) => {
+
+    const path = constructPath(sku);
+    //console.log(route);
+    console.log(sku);
+    // console.log(typeof sku);
+    // console.log(require("../data/products/876661122392077_1.jpg") );
+    // const full = "require(" + sku + ")";
+    // const test =
     return (
         <div>
-            <img src={props.src} alt="error" />
+            {/*<img sku = {require(sku)} alt="error" />*/}
+            {/*<img src = { require("../data/products/876661122392077_1.jpg") } />*/}
+            {/*below WORKS*/}
+            <img src = { path }  alt = "error"/>
         </div>
     );
 };

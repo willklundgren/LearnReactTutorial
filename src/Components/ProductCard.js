@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card/index';
 import { withStyles } from '@material-ui/core/styles/index';
 import SizeButton from './SizeButton';
 import ProductDescription from './ProductDescription';
+import ProductPicture from "./ProductPicture";
 
 const styles = {
     card: {
@@ -26,10 +27,11 @@ const styles = {
 // Contains a ProductPicture component and a ProductDescription component
 
 const ProductCard = ({classes, triplet}) => {
+    console.log(triplet[0]);
     return (
         <div>
             <Card className={classes.product_card} >
-                ProductPicture goes here
+                <ProductPicture sku = { triplet[0] } />
                 <br/>
                 <br/>
                 <ProductDescription name = {triplet[1]} price = {triplet[2]} />

@@ -44,7 +44,7 @@ function App() {
     // Pass product_triplets down from Products component
 
 
-    // for reference: <ProductPicture src = {require("./data_src/products/876661122392077_1.jpg")}/>
+    // for reference: <ProductPicture src = {require("./data/products/876661122392077_1.jpg")}/>
 
     // note: rename image file paths accordingly
     return (
