@@ -21,15 +21,24 @@ const styles = {
     }
 };
 
+// Create our number formatter.
+var formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+});
+
 // Component containing the name and price of the given sku
 
-const ProductDescription = ( {classes, name, price}) => {
+const ProductDescription = ( {classes, name, price, style} ) => {
     return (
         <div>
             <span>{name}</span>
             <br/>
             <br/>
-            <span>{price}</span>
+            <span>{formatter.format(price)}</span>
+            <br/>
+            <br/>
+            <span>{style}</span>
         </div>
     );
 };

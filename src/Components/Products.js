@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card/index';
 import { withStyles } from '@material-ui/core/styles/index';
 import SizeButton from './SizeButton'
 import ProductCard from "./ProductCard";
+import Grid from '@material-ui/core/Grid';
 
 const styles = {
     card: {
@@ -37,11 +38,11 @@ const styles = {
 // Products
 // Input: an array of product_triplets
 
-const Products = ({classes, triplets}) => {
+const Products = ( {classes, all_sku_info} ) => {
     return (
-        <div>
-            { triplets.map(prod_triplet => <ProductCard triplet = {prod_triplet} /> ) }
-        </div>
+        <Grid container justify="space-evenly">
+            { all_sku_info.map(prod_info => <ProductCard info = {prod_info} /> ) }
+        </Grid>
     );
 };
 

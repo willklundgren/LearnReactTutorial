@@ -11,7 +11,8 @@ const styles = {
         color: "#fff"
     },
     button: {
-        width: 150,
+        width: 10,
+        color: "black"
     }
 };
 

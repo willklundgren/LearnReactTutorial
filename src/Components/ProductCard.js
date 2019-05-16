@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles/index';
 import SizeButton from './SizeButton';
 import ProductDescription from './ProductDescription';
 import ProductPicture from "./ProductPicture";
+import Paper from '@material-ui/core/Paper';
 
 const styles = {
     card: {
@@ -26,15 +27,15 @@ const styles = {
 // A card for a **single** product.
 // Contains a ProductPicture component and a ProductDescription component
 
-const ProductCard = ({classes, triplet}) => {
-    console.log(triplet[0]);
+const ProductCard = ({classes, info}) => {
+    console.log(info[0]);
     return (
         <div>
             <Card className={classes.product_card} >
-                <ProductPicture sku = { triplet[0] } />
+                <ProductPicture sku = { info[0] } />
                 <br/>
                 <br/>
-                <ProductDescription name = {triplet[1]} price = {triplet[2]} />
+                <ProductDescription name = {info[1]} price = {info[2]} style={info[3]} />
             </Card>
         </div>
     );
