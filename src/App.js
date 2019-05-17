@@ -8,6 +8,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
 import {Card} from "@material-ui/core";
 import Toolbar from '@material-ui/core/Toolbar';
+import Cart from './Components/Cart/Cart';
 
 function App() {
 
@@ -53,12 +54,15 @@ function App() {
     // note: rename image file paths accordingly
     return (
         <div>
+            <Cart />
+
             <AppBar position="static">
                 <Toolbar>
                     <h1>The React Store</h1>
                     <SizeBox/>
                 </Toolbar>
             </AppBar>
+
             <Grid container >
 
                 <Grid item >
@@ -66,6 +70,7 @@ function App() {
                 </Grid>
 
             </Grid>
+
         </div>
     );
 }
